@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/*
+ * Copyright 2001-2008 The Apache Software Foundation.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+        <display-name>jUDDI Graphical User Interface (juddi-gui)</display-name>
+        <description>This is an end user web application for an implementation of OASIS's UDDI v3 specification</description>
+        <session-config>
+                <session-timeout>
+                        30
+                </session-timeout>
+        </session-config>
+        <welcome-file-list>
+                <welcome-file>index.jsp</welcome-file>
+        </welcome-file-list>
+        <mime-mapping>
+                <!-- this is added for the Font Awesome extension for bootstrap (cooler, scalable icons)-->
+                <extension>woff</extension>
+                <mime-type>application/x-font-woff</mime-type>
+        </mime-mapping>    
+     
+        <listener>
+            <listener-class>com.github.spyhunter99.i18n.demo.web.AppInitializer</listener-class>
+        </listener>
+</web-app>
